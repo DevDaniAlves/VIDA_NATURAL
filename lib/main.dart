@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'HomePage.dart';
 import 'ResetPasswordPage.dart';
 
 void main() {
@@ -37,8 +38,12 @@ class _LoginPageState extends State<LoginPage> {
             width: double.maxFinite,
             height: double.maxFinite,
             child: Stack(children: <Widget>[
-              const Positioned(
-                child: SizedBox(),
+              Positioned(
+                child: Image.asset(
+              "images/logovida.png",
+              width: MediaQuery.of(context).size.width,
+              height: 200,
+            ),
               ),
               Positioned(
                 top: 200,
@@ -96,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              TelaPosLogin()));
+                                              HomePage()));
                                 }),
                           ),
                         ),
